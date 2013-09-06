@@ -13,7 +13,7 @@ fi
 #
 # Clear previous level
 #
-cd $game_root
+$real_cd $game_root
 find -x {,.}* -prune  \! \( -name "mayalinux" -or -name "..." -or -name ".." -or -name "." \) -exec rm -rf {} \;
 
 #
@@ -55,7 +55,7 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "Level built\nRunning level" >&2 ; fi
 
 clear
 cat $data_path/implementations/$lang/$theme/$level/intro.txt
-cd $player_path
+$real_cd $player_path
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Level ran\nExiting runlevel.sh" >&2 ; fi
 

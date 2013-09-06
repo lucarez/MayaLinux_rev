@@ -17,11 +17,8 @@ alias $readme="cat $readme.txt"
 
 alias cat="$data_path/core/anticheat/cat"
 export real_cat="`which cat`"
-#alias ls="$data_path/core/anticheat/ls"
-#export real_ls="`which ls`"
 #alias cd="$data_path/core/anticheat/cd"
 #export real_cd="`which cd`"
-
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Exiting game_aliases.sh" >&2 ; fi
 

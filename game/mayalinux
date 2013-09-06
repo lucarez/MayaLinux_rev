@@ -32,9 +32,9 @@ fi
 #fi
 #
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Running run.sh" >&2 ; fi
-#chroot $CHROOT /.../game/run.sh
-#/bin/bash --init-file .../game/run.sh
-.../game/run.sh
+#chroot $CHROOT /.../core/run.sh
+#/bin/bash --init-file .../core/run.sh
+.../core/run.sh
 if [ ! -z $mayalinuxDebug ] ; then echo -e "run.sh exited" >&2 ; fi
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Deleting temporary game files" >&2 ; fi
 find -x {,.}* -prune  \! \( -name "mayalinux" -or -name "..." -or -name ".." -or -name "." \) -exec rm -rf {} \;
@@ -45,7 +45,7 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "Temporary game files deleted" >&2 ; 
 ##mount -o bind /dev ./dev
 ##mount -o bind /dev/pts ./dev/pts
 ##mount -o bind /sys ./sys
-##chroot . .../game/start.sh
+##chroot . .../core/start.sh
 ##umount ./sys
 ##umount ./dev/pts
 ##umount ./dev

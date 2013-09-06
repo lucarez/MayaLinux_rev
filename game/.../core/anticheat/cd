@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# if used doesn't work properly :-/
+
+if [ ! -z $mayalinuxDebug ] ; then echo -e "Using anticheat cd" >&2 ; fi
+
+$real_cd $@
+destionation="$(pwd)"
+if [ ! ${#destionation} -ge ${#player_path} -o ! "${destionation:0:${#player_path}}" = "$player_path" ]
+  then
+    $real_cd -
+    cat $data_path/implementations/$lang/commons/cd.txt
+fi
+

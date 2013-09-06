@@ -15,6 +15,7 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "Setting global variables" >&2 ; fi
 
 export game_root="`pwd`"
 export data_path="$game_root/..."
+export real_cd="cd"
 
 old_ps1=$PS1
 ## TODO retrieve single fields: color, name, title,... and build all in this file ##
