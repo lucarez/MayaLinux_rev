@@ -1,0 +1,56 @@
+#!/bin/bash
+
+if [ ! -z $mayalinuxDebug ] ; then echo -e "mayalinux started" >&2 ; fi
+
+if [ ! -d "..." -o "`ls -Al | grep -i "^d" | wc -l`" -gt "1" ]
+  then
+    echo "Something went wrong, are you sure to be in the game directory?"
+    read
+    exit 1
+fi
+
+##
+## Chroot on the game path
+##
+#
+#CHROOT='`pwd`'
+##mkdir $CHROOT
+#
+#for i in $( ldd $* | grep -v dynamic | cut -d " " -f 3 | sed 's/://' | sort | uniq )
+#  do
+#    cp --parents $i $CHROOT
+#  done
+#
+# ARCH amd64
+#if [ -f /lib64/ld-linux-x86-64.so.2 ]; then
+#   cp --parents /lib64/ld-linux-x86-64.so.2 /$CHROOT
+#fi
+#
+## ARCH i386
+#if [ -f  /lib/ld-linux.so.2 ]; then
+#   cp --parents /lib/ld-linux.so.2 /$CHROOT
+#fi
+#
+if [ ! -z $mayalinuxDebug ] ; then echo -e "Running run.sh" >&2 ; fi
+#chroot $CHROOT /.../game/run.sh
+#/bin/bash --init-file .../game/run.sh
+.../game/run.sh
+if [ ! -z $mayalinuxDebug ] ; then echo -e "run.sh exited" >&2 ; fi
+if [ ! -z $mayalinuxDebug ] ; then echo -e "Deleting temporary game files" >&2 ; fi
+find -x {,.}* -prune  \! \( -name "mayalinux" -or -name "..." -or -name ".." -or -name "." \) -exec rm -rf {} \;
+if [ ! -z $mayalinuxDebug ] ; then echo -e "Temporary game files deleted" >&2 ; fi
+#
+##
+##mount -o bind /proc ./proc
+##mount -o bind /dev ./dev
+##mount -o bind /dev/pts ./dev/pts
+##mount -o bind /sys ./sys
+##chroot . .../game/start.sh
+##umount ./sys
+##umount ./dev/pts
+##umount ./dev
+##umount ./proc
+##
+
+if [ ! -z $mayalinuxDebug ] ; then echo -e "Exiting mayalinux" >&2 ; fi
+

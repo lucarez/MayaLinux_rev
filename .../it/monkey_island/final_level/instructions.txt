@@ -1,0 +1,16 @@
+ _____________________________________________________________________________
+|                                                                             |
+|                                                                             |
+|             Per vedere la tua taglia affissa e per farla vedere             |
+|            agli aspiranti pirati che passeranno di qua in futuro            |
+|                                                                             |
+|                                                                             |
+|       Crea un file con il tuo nome da pirata utilizzando il comando         |
+|                                                                             |
+|                          "touch <tuo_nome_pirata>"                          |
+|                                                                             |
+|             N.B. Un vero pirata non metterebbe spazi nel nome               |
+|                                                                             |
+|   Una volta creato il file eseguite ". procedi.sh" per terminare il gioco   |
+|                                                                             |
+|_____________________________________________________________________________|

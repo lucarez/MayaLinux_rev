@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ ! -z $mayalinuxDebug ] ; then echo -e "Using anticheat cat" >&2 ; fi
+
+orig="$@"
+temp="`echo "$@" | grep .sh | wc -l`"
+set -- $temp
+if [ ! "$1" = "0" ]
+  then
+    $real_cat $data_path/$lang/commons/cat.txt
+  else
+    set -- $orig
+    $real_cat $1
+fi
+

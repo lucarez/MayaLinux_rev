@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export exiting="Sei sicuro di voler uscire? [s/n]"
+export no="no"
+export yes="si"
+export press_enter="Premi Invio per continuare"
+export cheater="Bel tentativo, ma devi impegnarti di pi√π per barare a questo gioco!"
+export readme="leggimi"
+export action="procedi"
+export instructions="istruzioni"
+
