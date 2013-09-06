@@ -15,13 +15,18 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "Setting global variables" >&2 ; fi
 
 export game_root="`pwd`"
 export data_path="$game_root/..."
-export real_cd="cd"
 
 old_ps1=$PS1
 ## TODO retrieve single fields: color, name, title,... and build all in this file ##
 . $data_path/implementations/$lang/$theme/display_settings
 ####################################################################################
 . $data_path/implementations/$lang/commons/lang_pack
+
+#
+# Anticheat check command
+#
+
+export PROMPT_COMMAND=". $data_path/core/anticheat/cd"
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Global variables set" >&2 ; fi
 
