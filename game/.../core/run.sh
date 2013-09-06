@@ -7,7 +7,26 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "run.sh started" >&2 ; fi
 #
 
 ## TODO retrieve avaiable games & let choose what to play ##
-              export lang="it"
+              PS3='Please enter your choice: '
+              options=("Italiano" "English" "Quit")
+              select opt in "${options[@]}"
+              do
+                  case $opt in
+                      "Italiano")
+                          export lang="it"
+                          break
+                          ;;
+                      "English")
+                          export lang="en"
+                          break
+                          ;;
+                      "Quit")
+                          exit
+                          ;;
+                      *) echo invalid option;;
+                  esac
+              done
+              #export lang="it"
               export theme="monkey_island"
 ############################################################
 

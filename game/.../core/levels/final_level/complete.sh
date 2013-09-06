@@ -19,9 +19,9 @@ if [ ! "$n" -eq "1" ]
   else
     name="$(eval "$find -exec echo {} \;")"
     let elapsedtime=$finaltime-$starttime
-    if [ ! -d $data_path/winners/implementations/$lang/$theme ]
+    if [ ! -d $data_path/winners/$lang/$theme ]
       then
-        mkdir -p $data_path/winners/implementations/$lang/$theme
+        mkdir -p $data_path/winners/$lang/$theme
     fi
     cat $data_path/implementations/$lang/$theme/final_level/score.txt
 date -j -f "%s" "123" "+%M:%S" #    date -d "@$elapsedtime" "+%H:%M:%S" 
