@@ -1,0 +1,22 @@
+ ___________________________________________________________________________
+|                                                                           |
+|                                                                           |
+|           Game made to learn some basic Linux terminal commands           |
+|                                                                           |
+|                                                                           |
+|         Developed form the "Esploratori della rete, Bit Prepared!"        |
+|               staff, an informatic competence scout camp                  |
+|                                                                           |
+|                                                                           |   
+|                 version 3.0 Monkey Island (en) - Sept 2013                |   
+|                                                                           |
+|                                                                           |
+|                                                                           |
+|                     For info on the competence camp:                      |
+|                Camp Chief - email: capicampo@bitprepared.it               |
+|                                                                           |
+|                    For suggestions or to report bugs:                     |
+|            Tecnical Staff - email: staff.tecnica@bitprepared.it           |
+|                                                                           |
+|___________________________________________________________________________|
+

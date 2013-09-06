@@ -1,0 +1,5 @@
+Use "cat <filename>" to read .txt files
+
+Use ". continue.sh", after following the instructions,
+to continue the game.
+

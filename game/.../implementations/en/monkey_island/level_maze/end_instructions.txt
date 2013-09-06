@@ -1,0 +1,20 @@
+______________________________________________________________________________
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                After hours and hours spent wandering blinded                |
+|                  in the wood, you finally found a way out!                  |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             | 
+|                 In the distance you can see the Scumm bar!                  |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                To continue, run the command: ". continue.sh"                |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|                                                                             |
+|_____________________________________________________________________________|

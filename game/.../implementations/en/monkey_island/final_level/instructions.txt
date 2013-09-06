@@ -1,0 +1,16 @@
+ _____________________________________________________________________________
+|                                                                             |
+|                                                                             |
+|               To see your reward and to let see it to all the               |
+|            aspiring pirates that will stop by here in the future            |
+|                                                                             |
+|                                                                             |
+|        Create a file named with your pirate name using the command:         |
+|                                                                             |
+|                         "touch <your_pirate_name>"                          |
+|                                                                             |
+|            N.B. A real pirate wouldn't use a name with whitespace           |
+|                                                                             |
+|          Once created the file run ". continue.sh" to end the game          |
+|                                                                             |
+|_____________________________________________________________________________|
