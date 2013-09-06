@@ -5,12 +5,12 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "check.sh started\nAsking for '$1' fr
 if [ "$#" -eq "1" ]
   then  
     # Check that you are on the right level
-    if [ "$1" = "`cat $data_path/$lang/$theme/start`" ]
+    if [ "$1" = "`cat $data_path/implementations/$lang/$theme/start`" ]
       then
         export clvl="$1"
         echo 0
       else
-        if [ "$1" = "`cat $data_path/$lang/$theme/$clvl/next`" -a "$lvls" = "yes" ]
+        if [ "$1" = "`cat $data_path/implementations/$lang/$theme/$clvl/next`" -a "$lvls" = "yes" ]
           then
             export clvl="$1"
             echo 0

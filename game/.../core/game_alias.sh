@@ -7,7 +7,7 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "Started game_aliases.sh" >&2 ; fi
 #
 
 alias echo="echo -e"
-alias $instructions="cat $data_path/$lang/commons/rules.txt"
+alias $instructions="cat $data_path/implementations/$lang/commons/rules.txt"
 alias $action=". $action.sh"
 alias $readme="cat $readme.txt"
 
@@ -15,11 +15,11 @@ alias $readme="cat $readme.txt"
 # Anticheat aliases
 #
 
-alias cat="$data_path/game/anticheat/cat"
+alias cat="$data_path/core/anticheat/cat"
 export real_cat="`which cat`"
-#alias ls="$data_path/game/anticheat/ls"
+#alias ls="$data_path/core/anticheat/ls"
 #export real_ls="`which ls`"
-#alias cd="$data_path/game/anticheat/cd"
+#alias cd="$data_path/core/anticheat/cd"
 #export real_cd="`which cd`"
 
 

@@ -18,9 +18,9 @@ export data_path="$game_root/..."
 
 old_ps1=$PS1
 ## TODO retrieve single fields: color, name, title,... and build all in this file ##
-. $data_path/$lang/$theme/display_settings
+. $data_path/implementations/$lang/$theme/display_settings
 ####################################################################################
-. $data_path/$lang/commons/lang_pack
+. $data_path/implementations/$lang/commons/lang_pack
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Global variables set" >&2 ; fi
 
@@ -33,15 +33,15 @@ function print_and_wait {
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Printing credits" >&2 ; fi
 
-print_and_wait $data_path/$lang/$theme/title.txt
-print_and_wait $data_path/$lang/commons/author.txt
-print_and_wait $data_path/$lang/commons/rules.txt
+print_and_wait $data_path/implementations/$lang/$theme/title.txt
+print_and_wait $data_path/implementations/$lang/commons/author.txt
+print_and_wait $data_path/implementations/$lang/commons/rules.txt
 
 export starttime="`date +%s`"
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Credits printed\nBuilding first level" >&2 ; fi
 
-. $data_path/game/buildlevel.sh 
+. $data_path/core/buildlevel.sh 
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Level built and ran" >&2 ; fi
 
@@ -51,11 +51,11 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "Level built and ran" >&2 ; fi
 #
 #while [ "$answer" = "$no" -o "$answer" = "${no:0:1}" ] ; do
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Running shell" >&2 ; fi
-/bin/bash --init-file $data_path/game/game_alias.sh
+/bin/bash --init-file $data_path/core/game_alias.sh
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Shell exited" >&2 ; fi
 #  answer="maybe"
 #  while [ "$answer" != "$no" -a "$answer" != "${no:0:1}" -a "$answer" != "$yes" -a "$answer" != "${yes:0:1}" ] ; do
-#    cat $data_path/$lang/commons/exiting.txt
+#    cat $data_path/implementations/$lang/commons/exiting.txt
 #    read answer
 #    answer=`echo "$answer" | tr [:upper:] [:lower:]`
 #  done

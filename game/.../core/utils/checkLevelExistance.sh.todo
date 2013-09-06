@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$#" -eq "0" ] ; then exit 1 ; fi
-if [ -d "$data_path/game/levels/$1" ]
+if [ -d "$data_path/core/levels/$1" ]
   then
     if [ ! "$1" = "game" -o ! "$1" = "util" -o "$1" = "anticheat" ]
       then

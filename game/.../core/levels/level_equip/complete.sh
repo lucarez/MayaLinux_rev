@@ -11,6 +11,6 @@ export lvls="yes"
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "level_maze completed\nrequesting build of $next" >&2 ; fi
 
-next="`cat $data_path/$lang/$theme/level_maze/next`"
-. $data_path/game/buildlevel.sh $next
+next="`cat $data_path/implementations/$lang/$theme/level_maze/next`"
+. $data_path/core/buildlevel.sh $next
 
