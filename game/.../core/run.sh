@@ -23,7 +23,10 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "run.sh started" >&2 ; fi
                       "Quit")
                           exit
                           ;;
-                      *) echo invalid option;;
+                      *) 
+                          echo invalid option
+                          exit
+                          ;;
                   esac
               done
               #export lang="it"
