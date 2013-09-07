@@ -1,22 +1,30 @@
 #!/bin/bash
 
-if [ ! -z $mayalinuxDebug ] ; then echo -e "mayalinux started" >&2 ; fi
+if [ ! -z $mayalinuxDebug ] ; then echo -e "mayalinux started\nmoving to the script directory" >&2 ; fi
 
-if [ ! -d "..." -o "`ls -Al | grep -i "^d" | wc -l`" -gt "1" ]
+cd "$(dirname "$0")"
+
+if [ ! -z $mayalinuxDebug ] ; then echo -e "checking the game presence" >&2 ; fi
+
+if [ ! -d "..." ]
   then
-    echo "Something went wrong, are you sure to be in the game directory?"
+    echo "Something went wrong, are you sure to have copy the whole game directory?"
     read
     exit 1
 fi
+
+if [ ! -z $mayalinuxDebug ] ; then echo -e "cleaning the game directory" >&2 ; fi
+
+find -x {,.}* -prune  \! \( -name "mayalinux" -or -name "..." -or -name ".." -or -name "." \) -exec rm -rf {} \;
 
 ##
 ## Chroot on the game path
 ##
 #
 #CHROOT='`pwd`'
-##mkdir $CHROOT
+#commands="`which bash` `which cp` `which mv` `which ln` `which which` `which ls`"
 #
-#for i in $( ldd $* | grep -v dynamic | cut -d " " -f 3 | sed 's/://' | sort | uniq )
+#for i in $( ldd $commands | grep -v dynamic | cut -d " " -f 3 | sed 's/://' | sort | uniq )
 #  do
 #    cp --parents $i $CHROOT
 #  done
@@ -31,26 +39,29 @@ fi
 #   cp --parents /lib/ld-linux.so.2 /$CHROOT
 #fi
 #
+#mkdir proc
+#mount -o bind /proc ./proc
+#mkdir dev
+#mount -o bind /dev ./dev
+#mkdir dev/pts
+#mount -o bind /dev/pts ./dev/pts
+#mkdir sys
+#mount -o bind /sys ./sys
+#
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Running run.sh" >&2 ; fi
 #chroot $CHROOT /.../core/run.sh
 #/bin/bash --init-file .../core/run.sh
 .../core/run.sh
 if [ ! -z $mayalinuxDebug ] ; then echo -e "run.sh exited" >&2 ; fi
+#
+#umount ./sys
+#umount ./dev/pts
+#umount ./dev
+#umount ./proc
+#
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Deleting temporary game files" >&2 ; fi
 find -x {,.}* -prune  \! \( -name "mayalinux" -or -name "..." -or -name ".." -or -name "." \) -exec rm -rf {} \;
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Temporary game files deleted" >&2 ; fi
-#
-##
-##mount -o bind /proc ./proc
-##mount -o bind /dev ./dev
-##mount -o bind /dev/pts ./dev/pts
-##mount -o bind /sys ./sys
-##chroot . .../core/start.sh
-##umount ./sys
-##umount ./dev/pts
-##umount ./dev
-##umount ./proc
-##
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Exiting mayalinux" >&2 ; fi
 
