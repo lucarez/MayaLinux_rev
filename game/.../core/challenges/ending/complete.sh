@@ -14,19 +14,19 @@ n="$(eval "$find | wc -l")"
 
 if [ ! "$n" -eq "1" ]
   then
-    cat $data_path/implementations/$lang/$theme/final_level/error.txt
+    cat $level_path/error.txt
     eval "$find -exec rm {} \;"
   else
     name="$(eval "$find -exec echo {} \;")"
     let elapsedtime=$finaltime-$starttime
-    if [ ! -d $data_path/winners/$lang/$theme ]
+    if [ ! -d $score_path ]
       then
-        mkdir -p $data_path/winners/$lang/$theme
+        mkdir -p $score_path
     fi
-    cat $data_path/implementations/$lang/$theme/final_level/score.txt
+    cat $level_path/score.txt
 date -j -f "%s" "123" "+%M:%S" #    date -d "@$elapsedtime" "+%H:%M:%S" 
-    echo "$name:$elapsedtime:`date +%Y`" > $data_path/winners/$lang/$theme/$name.$finaltime
-    cat $data_path/implementations/$lang/$theme/final_level/goodbye.txt
+    echo "$name:$elapsedtime:`date +%Y`" > $score_path/$name.$finaltime
+    cat $level_path/goodbye.txt
     read
     if [ ! -z $mayalinuxDebug ] ; then echo -e "final_level completed\nexiting" >&2 ; fi
     exit

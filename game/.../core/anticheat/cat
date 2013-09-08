@@ -7,7 +7,7 @@ temp="`echo "$@" | grep .sh | wc -l`"
 set -- $temp
 if [ ! "$1" = "0" ]
   then
-    $real_cat $data_path/implementations/$lang/commons/cat.txt
+    $real_cat $data_path/commons/cat.txt
   else
     set -- $orig
     $real_cat $1

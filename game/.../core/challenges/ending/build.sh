@@ -6,8 +6,8 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "final_level builder started" >&2 ; f
 # Build the level
 #
 
-ln -f $data_path/core/levels/final_level/complete.sh $player_path/$action.sh
-ln -f $data_path/implementations/$lang/$theme/final_level/instructions.txt $player_path/$readme.txt
+ln -f $challenge_path/complete.sh $playing_path/$action.sh
+ln -f $level_path/instructions.txt $playing_path/$readme.txt
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "final_level built" >&2 ; fi
 

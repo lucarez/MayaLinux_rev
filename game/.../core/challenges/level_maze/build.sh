@@ -6,20 +6,20 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "level_maze builder started" >&2 ; fi
 # Build the level
 #
 
-eval "$(cat $data_path/implementations/$lang/$theme/level_maze/directions)"
+eval "$(cat $level_path/directions)"
 
 function dead_end {
-  mkdir -p $player_path/$1
-  ln -f $data_path/implementations/$lang/$theme/level_maze/dead_end.txt $player_path/$1/$readme.txt
+  mkdir -p $playing_path/$1
+  ln -f $level_path/dead_end.txt $playing_path/$1/$readme.txt
 }
 
 function maze_end {
-  mkdir -p $player_path/$1
-  ln -f $data_path/implementations/$lang/$theme/level_maze/end_instructions.txt $player_path/$1/$readme.txt
-  ln -f $data_path/core/levels/level_maze/complete.sh $player_path/$1/$action.sh
+  mkdir -p $playing_path/$1
+  ln -f $level_path/end_instructions.txt $playing_path/$1/$readme.txt
+  ln -f $challenge_path/complete.sh $playing_path/$1/$action.sh
 }
 
-ln -f $data_path/implementations/$lang/$theme/level_maze/begin_instructions.txt $player_path/$1/$readme.txt
+ln -f $level_path/begin_instructions.txt $playing_path/$1/$readme.txt
 
 dead_end $f/$f/$f/$r/$f/$l
 dead_end $f/$f/$f/$r/$l/$r

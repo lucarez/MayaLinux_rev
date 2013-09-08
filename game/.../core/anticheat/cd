@@ -1,13 +1,11 @@
 #!/bin/bash
 
-# if used doesn't work properly :-/
-
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Looking for unwanted cd" >&2 ; fi
 
 destionation="$(pwd)"
-if [ ! ${#destionation} -ge ${#player_path} -o ! "${destionation:0:${#player_path}}" = "$player_path" ]
+if [ ! ${#destionation} -ge ${#playing_path} -o ! "${destionation:0:${#playing_path}}" = "$playing_path" ]
   then
     cd - > /dev/null
-    cat $data_path/implementations/$lang/commons/cd.txt
+    cat $data_path/commons/cd.txt
 fi
 

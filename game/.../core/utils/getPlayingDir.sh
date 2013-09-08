@@ -1,11 +1,12 @@
 #!/bin/bash
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "getLevelDir.sh started\nretrieving dir for '$1'" >&2 ; fi
-if [ ! "$#" -eq "1" -o ! -f "$data_path/implementations/$lang/$theme/$1/level_dir" ]
+
+if [ ! -f "$level_path/level_dir" ]
   then
-    echo "$1"
+    echo "$(basename $level_path)"
   else
-    temp_level_dir="`cat $data_path/implementations/$lang/$theme/$1/level_dir`"
+    temp_level_dir="`cat $level_path/level_dir`"
     set -- $temp_level_dir
     echo "$1"
 fi

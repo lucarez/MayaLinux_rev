@@ -5,7 +5,7 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "runlevel.sh started" >&2 ; fi
 # If runned with no level sets the and run the first level
 if [ "$#" -eq "0" ]
   then
-    level="`cat $data_path/implementations/$lang/$theme/start`"
+    level="$(cat $data_path/$theme/start)"
   else
     level="$1"
 fi
@@ -13,8 +13,10 @@ fi
 #
 # Clear previous level
 #
+
 cd $game_root
 find -x {,.}* -prune  \! \( -name "mayalinux" -or -name "..." -or -name ".." -or -name "." \) -exec rm -rf {} \;
+
 
 #
 # Check for cheater
@@ -22,18 +24,16 @@ find -x {,.}* -prune  \! \( -name "mayalinux" -or -name "..." -or -name ".." -or
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Checking for cheater" >&2 ; fi
 
-
-cheat="$($data_path/core/anticheat/check.sh $level)"
-. $data_path/core/anticheat/check.sh $level &> /dev/null
-if [ ! "$cheat" -eq "0" ]
+status="$($core_path/anticheat/check.sh $level)"
+. $core_path/anticheat/check.sh $level &> /dev/null
+if [ "$status" -gt "1" ]
   then
     echo $cheater
     echo $press_enter
-#   echo "Nice try, but you have to try harder to cheat at this game\nPress Enter to continute"
     read
     if [ ! -z $mayalinuxDebug ] ; then echo -e "Cheater found, bringing him to the first level" >&2 ; fi
-    level="`cat $data_path/implementations/$lang/$theme/start`"
-    . $data_path/core/anticheat/check.sh $level &> /dev/null
+    level="$(cat $data_path/$theme/start)"
+    . $core_path/anticheat/check.sh $level &> /dev/null
 fi
 
 
@@ -43,9 +43,12 @@ fi
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Building level $level" >&2 ; fi
 
-export player_path="$game_root/$($data_path/core/utils/getLevelDir.sh $level)"
-mkdir $player_path
-source $data_path/core/levels/$level/build.sh
+export level_path="$data_path/$theme/$level"
+export playing_path="$game_root/$($core_path/utils/getPlayingDir.sh $level)"
+export challenge="$($core_path/utils/getChallengeDir.sh $level)"
+export challenge_path="$core_path/challenges/$challenge"
+mkdir $playing_path
+. $challenge_path/build.sh
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Level built\nRunning level" >&2 ; fi
 
@@ -54,8 +57,20 @@ if [ ! -z $mayalinuxDebug ] ; then echo -e "Level built\nRunning level" >&2 ; fi
 #
 
 clear
-cat $data_path/implementations/$lang/$theme/$level/intro.txt
-cd $player_path
+if [ "$status" -eq "1" ]
+  then
+    cat $level_path/retry.txt 2> /dev/null
+    if [ ! "$?" = "0" ]; then cat $level_path/intro.txt; fi
+  else
+    if [ "$2" = "failed" ]
+      then
+        cat $level_path/intro4loser.txt 2> /dev/null
+        if [ ! "$?" = "0" ]; then cat $level_path/intro.txt; fi
+      else
+        cat $level_path/intro.txt
+    fi
+fi
+cd $playing_path
 
 if [ ! -z $mayalinuxDebug ] ; then echo -e "Level ran\nExiting runlevel.sh" >&2 ; fi
 
