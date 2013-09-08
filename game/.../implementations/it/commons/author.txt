@@ -1,0 +1,22 @@
+ ___________________________________________________________________________
+|                                                                           |
+|                                                                           |
+|    Gioco per imparare l'utilizzo di alcuni comandi del terminale Linux    |
+|                                                                           |
+|                                                                           |
+|           Sviluppato dalla staff del Campo di Competenza AGESCI           |
+|                 "Esploratori della rete, Bit Prepared!"                   |
+|                                                                           |
+|                                                                           |
+|           MayaLinux_rev v0.3 (it) Monkey Island - Settembre 2013          |
+|                                                                           |
+|                                                                           |
+|                        Per informazioni sul campo:                        |
+|                Capi campo - email: capicampo@bitprepared.it               |
+|                                                                           |
+|                                                                           |
+|                  Segnalare eventuali errori o anomalie ad:                |
+|            Staff tecnica - email: staff.tecnica@bitprepared.it            |
+|                                                                           |
+|___________________________________________________________________________|
+

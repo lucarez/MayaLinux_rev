@@ -1,0 +1,23 @@
+ ______________________________________________________________________________ 
+|                                                                              |
+|                         Some instructions to play...                         |
+|                                                                              |
+|    --  look around:                                                          |
+|          to know what there is around, whats the directions that you         |
+|          can take or which objects there are in front of you,                |
+|          use the "ls" command that will print a list                         |
+|                                                                              |
+|    --  when you'll found a .txt file read its content using                  |
+|        the "cat <filename>" command                                          |
+|                                                                              |
+|        N.B. read the "readme.txt" files before doing anything else           |
+|        their contents explain you what to do to complete the level           |
+|                                                                              |
+|    --  doing actions:                                                        |
+|          follow all the instructions in the readme.txt file, than            |
+|          to continue the game use the ". continue.sh" command                |
+|                                                                              |
+|    --  to exit the game use the "exit" command at any time                   |
+|                                                                              |
+|______________________________________________________________________________|
+

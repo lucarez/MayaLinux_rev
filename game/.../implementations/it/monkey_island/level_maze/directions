@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+# Set the local variable with the directions name
+#
+
+# forward direction
+f="a"
+# left direction
+l="s"
+# right direction
+r="d"

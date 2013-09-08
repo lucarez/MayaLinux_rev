@@ -1,0 +1,5 @@
+Usa "cat <nome_file>" per leggere i file .txt
+
+Usa ". procedi.sh", dopo aver seguito le istruzioni,
+per proseguire con il gioco.
+

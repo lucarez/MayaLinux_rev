@@ -1,0 +1,23 @@
+ ______________________________________________________________________________ 
+|                                                                              |
+|                         Un po' di regole del gioco...                        |
+|                                                                              |
+|    --  guardarsi intorno:                                                    |
+|          per sapere cos'hai intorno, quali sono le direzioni in              |
+|          cui puoi andare o quali oggetti hai a disposizione,                 |
+|          usare il comando "ls" che ti stamperà la lista                      |
+|                                                                              |
+|    --  ogni qualvolta troverai un file TXT leggine il contenuto              |
+|        usando il comando "cat <nome_file>.txt"                               |
+|                                                                              |
+|        N.B. leggere i file "leggimi.txt" prima di fare qualsiasi             |
+|        altra cosa, contiene le indicazioni per superare il livello           |
+|                                                                              |
+|    --  compiere azioni:                                                      |
+|          seguire tutte le istruzioni del file leggimi.txt ed infine          |
+|          per proseguire con il gioco usare il comando ". procedi.sh"         |
+|                                                                              |
+|    --  per uscire dal gioco usa il comando "exit"                            |
+|                                                                              |
+|______________________________________________________________________________|
+

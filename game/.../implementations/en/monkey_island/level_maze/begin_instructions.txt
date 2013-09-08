@@ -1,0 +1,23 @@
+ ______________________________________________________________________________    
+|                                                                              |
+|                      Here how to move around in the wood                     |
+|                                                                              |
+|    --  The directions.                                                       |
+|          Use "ls" to learn which are the directions that you can take.       |
+|          They will be:                                                       |
+|                 "f" that stand for forward                                   |
+|                 "l" that stand for left                                      |
+|                 "r" that stand for right                                     |
+|          To move around use the "cd" command, so, to go forward you'll       |
+|          run "cd f", to go left the command "cd l" and to go right "cd r",   |
+|          amd to go back you have to use the command:                         |
+|                                   "cd .."                                    |
+|                                                                              |
+|          N.B. Coming back with the command "cd .." you'll be in the          |
+|          previous point, turned in the same position of when you arrived     |
+|          in that place before, so if you go right "cd r" and than you go     |
+|          back "cd ..", if I choose to go right again, I'll be in the same    |
+|          place where I had just been before returning back.                  |
+|                                                                              |
+|    --  Remember to read the .txt files using the "cat readme.txt" command    |
+|______________________________________________________________________________|

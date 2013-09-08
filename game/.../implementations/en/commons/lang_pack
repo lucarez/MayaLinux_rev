@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export exiting="Are you sure to exit? [s/n]"
+export no="no"
+export yes="yes"
+export press_enter="Press Enter to continue"
+export cheater="Nice try, but you have to try harder to cheat at this game!"
+export readme="readme"
+export action="continue"
+export instructions="instructions"
+

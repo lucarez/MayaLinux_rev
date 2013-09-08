@@ -1,0 +1,23 @@
+ ______________________________________________________________________________    
+|                                                                              |
+|                       Ecco come muoversi nel labirinto…                      |
+|                                                                              |
+|    --  Le direzioni.                                                         |
+|          Usa "ls" per sapere quali sono le direzioni che puoi prendere.      |
+|          Potranno essere:                                                    |
+|                 "a" che sta per avanti                                       |
+|                 "s" che sta per sinistra                                     |
+|                 "d" che sta per destra                                       |
+|          Per spostarsi si usa il comando "cd", quindi per andare avanti      |
+|          si scriverà "cd a", per girare a sinistra il comando "cd s" e       |
+|          per andare a destra "cd d", mentre per tornare indietro occorre     |
+|          utilizzare il comando:                                              |
+|                                   "cd .."                                    |
+|          N.B. Tornando indietro con il comando "cd .." tornerai nel          |
+|          punto precedente, rivolto nella stessa posizione di quando          |
+|          eri arrivato in quel posto, quindi se vado a destra "cd d"          |
+|          e poi torno indietro "cd ..", se scelgo ancora a destra,            |
+|          sarò nuovamente nel luogo in cui ero appena stato                   |
+|                                                                              |
+|    --  Ricordati di leggere i file .txt usando il comando "cat leggimi.txt"  |
+|______________________________________________________________________________|
