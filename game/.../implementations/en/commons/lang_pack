@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export exiting="Sei sicuro di voler uscire? [s/n]"
+export exiting="Are you sure to exit? [s/n]"
 export no="no"
 export yes="yes"
 export press_enter="Press Enter to continue"
