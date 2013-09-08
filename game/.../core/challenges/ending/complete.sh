@@ -24,7 +24,7 @@ if [ ! "$n" -eq "1" ]
         mkdir -p $score_path
     fi
     cat $level_path/score.txt
-date -j -f "%s" "123" "+%M:%S" #    date -d "@$elapsedtime" "+%H:%M:%S" 
+date -d "@$elapsedtime" "+%H:%M:%S" # date -j -f "%s" "$elapsedtime" "+%M:%S" # <- MacOS version #### date -d "@$elapsedtime" "+%H:%M:%S" # <- Linux version
     echo "$name:$elapsedtime:`date +%Y`" > $score_path/$name.$finaltime
     cat $level_path/goodbye.txt
     read
