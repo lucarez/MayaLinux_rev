@@ -60,7 +60,8 @@ clear
 if [ "$status" -eq "1" ]
   then
     cat $level_path/retry.txt 2> /dev/null
-    if [ ! "$?" = "0" ]; then cat $level_path/intro.txt; fi
+    if [ ! "$?" = "0" ]; then cat $level_path/intro4loser.txt 2> /dev/null; fi
+    #if [ ! "$?" = "0" ]; then cat $level_path/intro.txt; fi  # should this be really printed on retry?
   else
     if [ "$2" = "failed" ]
       then

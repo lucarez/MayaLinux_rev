@@ -43,7 +43,9 @@ export score_path="$game_root/.../winners/$lang/$theme"
 
 old_ps1=$PS1
 ## TODO retrieve single fields: color, name, title,... and build all in this file ##
-. $data_path/$theme/display_settings
+if [[ -f "$data_path/$theme/display_settings" ]]; then
+  . $data_path/$theme/display_settings
+fi
 ####################################################################################
 . $data_path/commons/lang_pack
 
