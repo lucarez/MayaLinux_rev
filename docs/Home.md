@@ -4,12 +4,12 @@ A game made to let newcomers learn some basic terminal command.
 
 --------------------------------------------------------------------
 ###### Welcome to the MayaLinux_rev wiki! ######
-+ [What is it?](wiki#what-is-it)
-+ [Where does it come from?](wiki#history)
++ [What is it?](#what-is-it)
++ [Where does it come from?](#history)
 + [How to install it?](#installation)
 + [How does it works?](#how-does-it-works)
-+ [Create your own challenge](Challanges#how-to-create-a-new-challenge)
-+ [Personalize the theme](Themes#how-to-create-your-theme)
++ [Create your own challenge](Challanges.md#how-to-create-a-new-challenge)
++ [Personalize the theme](Themes.md#how-to-create-your-theme)
 
 
 #### What is it? ####
@@ -20,7 +20,7 @@ It come out with three adventure based on the same challenges:
 *   Matrix
 *   Monkey Island
 
-It means that the games are the same in fot the type of riddles or
+It means that the games are the same in type of riddles or
 things to do, but differs in solutions and in themes.
 
 
