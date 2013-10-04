@@ -8,7 +8,7 @@ A game made to let newcomers learn some basic terminal command.
 + [Where does it come from?](#history)
 + [How to install it?](#installation)
 + [How does it works?](#how-does-it-works)
-+ [Create your own challenge](Challanges.md#how-to-create-a-new-challenge)
++ [Create your own challenge](Challenges.md#how-to-create-a-new-challenge)
 + [Personalize the theme](Themes.md#how-to-create-your-theme)
 
 
